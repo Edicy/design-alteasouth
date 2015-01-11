@@ -24,8 +24,8 @@
         
             <div class="blog clearfix">
        <h1><span class="gray">{{ article.created_at | format_date:"short" }}</span> {% editable article.title plain="true" %}</h1>
-              <div class="excerpt">{% editable article.excerpt %}</div>
-              {% editable article.body %}
+              <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
+              <div data-search-indexing-allowed="true">{% editable article.body %}</div>
               <div class="clearer"></div>
               {% if editmode %}
                 <div class="article-tags">

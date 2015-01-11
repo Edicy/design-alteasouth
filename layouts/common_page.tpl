@@ -18,7 +18,7 @@
    
    {% include "Mainmenu" %}
    
-   <div id="content" class="clearfix">
+   <div id="content" class="clearfix" data-search-indexing-allowed="true">
      {% content %}
             <div class="clearer"></div>
    </div>
