@@ -143,3 +143,48 @@ div.edy-taglist-openarrow:after {
 .tagged-list-header  a {border: none; text-decoration: none;}
 .tagged-list-header  a:hover { border-bottom: 1px solid #BEBEBE; }
 .article-tags .edy-taglist { margin-left: 25px; }
+
+/* Voog cms style overrides */
+#wrap .edy-empty-bordered {
+  color: rgba(255,255,255,.33);
+  border-color: rgba(255,255,255,.33);
+}
+#wrap .edy-texteditor-view.placeholder {
+  color: rgba(255,255,255,.5);
+}
+#wrap .edy-content-element-hover {
+  border-color: rgba(255,255,255,.1);
+}
+#wrap .edy-texteditor-active {
+  outline-color: rgba(255,255,255,.2);
+}
+
+#wrap .edy-fe-field-active,
+#wrap .edy-fe-active .edy-fe-field:hover {
+  outline-color: rgba(255,255,255,.1);
+}
+
+#wrap .edy-taglist {
+  border-color: rgba(255,255,255,.2);
+}
+
+#wrap .edy-tag-input::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+#wrap .edy-tag-input:-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+#wrap .edy-tag-input::-moz-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+#wrap .edy-tag-input:-moz-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+#wrap .edy-btn-removecomment {
+  color: rgba(255,255,255,1) !important;
+}
