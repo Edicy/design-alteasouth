@@ -100,6 +100,13 @@ h3 {
     display: inline;
     font-size: 13px;
   }  
+#mainmenu li.vg-menu-btn, #submenu li.vg-menu-btn {
+  margin-left: 5px;
+}
+a.edy-cbtn {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 #mainmenu li a, #submenu li a {
   display: inline-block;
 }

@@ -163,6 +163,16 @@ div.edy-taglist-openarrow:after {
 #wrap .edy-fe-active .edy-fe-field:hover {
   outline-color: rgba(255,255,255,.1);
 }
+a.edy-cbtn>div {
+  color: #000000 !important;
+}
+a.edy-cbtn>div:before {
+  background-color: rgba(226,222,219,.5) !important;
+}
+
+a.edy-cbtn>div:hover:before {
+  background-color: rgba(226,222,219,1) !important;
+}
 
 #wrap .edy-taglist {
   border-color: rgba(255,255,255,.2);
