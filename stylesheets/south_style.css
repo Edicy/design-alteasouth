@@ -56,6 +56,13 @@ a:hover {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.content-hyphenate {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 .gray {
   color: #FFFFFF;
@@ -196,5 +203,8 @@ a.edy-cbtn>div:hover:before {
 }
 
 #wrap .edy-btn-removecomment {
+  position: relative;
+  top: 1px;
   color: rgba(255,255,255,1) !important;
+  line-height: 0 !important;
 }

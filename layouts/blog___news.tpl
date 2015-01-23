@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<div id="wrap">
+	<div id="wrap" class="content-hyphenate">
    
    <div id="header" class="clearfix">
      {% editable site.header %}
