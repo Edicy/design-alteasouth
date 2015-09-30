@@ -10,7 +10,7 @@
 	<div id="wrap" class="content-hyphenate">
 
    <div id="header" class="clearfix">
-     {% editable page.site_header %}
+     {% editable site.header %}
      <div class="clearer"></div>
    </div> <!-- //header -->
 
