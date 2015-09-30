@@ -6,24 +6,24 @@
 </head>
 
 <body>
-	
+
 	<div id="wrap" class="content-hyphenate">
-   
+
    <div id="header" class="clearfix">
-     {% editable site.header %}
+     {% editable page.site_header %}
      <div class="clearer"></div>
    </div> <!-- //header -->
-   
+
    {% include "Langmenu" %}
-   
+
    {% include "Mainmenu" %}
-   
+
    <div id="content" class="clearfix" data-search-indexing-allowed="true">
      {% content %}
             <div class="clearer"></div>
    </div>
-   
-   
+
+
    <div id="footer" class="clearfix">
      {% content name="footer" xpage="true" %}
    </div> <!-- //footer -->
@@ -31,7 +31,7 @@
     <div class="right" style="font-size: 11px; margin-top:10px;" id="edicy">{% loginblock %}{{ "footer_login_link" | lc }}{% endloginblock %}</div>
     <div class="clearer"></div>
 
-    
+
   </div> <!-- //wrap -->
   {% include "JS" %}
 </body>

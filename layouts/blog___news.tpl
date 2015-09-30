@@ -8,16 +8,16 @@
 
 <body>
 	<div id="wrap" class="content-hyphenate">
-   
+
    <div id="header" class="clearfix">
-     {% editable site.header %}
+     {% editable page.site_header %}
      <div class="clearer"></div>
    </div> <!-- //header -->
-   
+
    {% include "Langmenu" %}
-   
+
    {% include "Mainmenu" %}
-   
+
    <div id="content">
      {% if tags %}
         <div class="tagged-list-header">
@@ -31,26 +31,26 @@
      {% endif %}
      {% addbutton class="add-article" %}
             {% for article in articles %}
-        
+
               <div class="blog clearfix">
          <h1><span class="gray">{{ article.created_at | format_date:"short" }}</span> <a href="{{ article.url }}">{{ article.title }}</a></h1>
                 {{ article.excerpt }} <a href="{{ article.url }}">{{ "read_more" | lc }}</a> <a href="{{ article.url }}#comments">({{"comments_for_count" |lc }}: {{article.comments_count}})</a>
          </div>
             {% endfor %}
-     
+
    </div>
-   
+
    <div id="bottomgif" style="text-align: center;">
-   </div> 
-   
-   
+   </div>
+
+
    <div id="footer" class="clearfix">
      {% content name="footer" xpage="true" %}
    </div> <!-- //footer -->
    <div class="left" style="margin-top:10px;">{% include "Search" %}</div>
     <div class="right" style="font-size: 11px; margin-top:10px;" id="edicy">{% loginblock %}{{ "footer_login_link" | lc }}{% endloginblock %}</div>
     <div class="clearer"></div>
-    
+
   </div> <!-- //wrap -->
   {% include "JS" %}
 </body>

@@ -7,21 +7,21 @@
 </head>
 
 <body>
-	
+
 	<div id="wrap" class="content-hyphenate">
-   
+
    <div id="header" class="clearfix">
-     {% editable site.header %}
+     {% editable page.site_header %}
      <div class="clearer"></div>
    </div> <!-- //header -->
-   
+
    {% include "Langmenu" %}
-   
+
    {% include "Mainmenu" %}
-   
+
    <div id="content">
-           
-        
+
+
             <div class="blog clearfix">
        <h1><span class="gray">{{ article.created_at | format_date:"short" }}</span> {% editable article.title plain="true" %}</h1>
               <div class="excerpt" data-search-indexing-allowed="true">{% editable article.excerpt %}</div>
@@ -42,22 +42,22 @@
                     </div>
                 {% endunless %}
             {% endif %}
-              
-              
-              
-              
+
+
+
+
               <a name="comments"></a>
        </div>
             {% unless article.new_record? %}<h1>{{ "comments_for_count"|lc}}: <span class="gray edy-site-blog-comments-count">{{article.comments_count}}</span> </h1>{% endunless %}
             {% for comment in article.comments %}
-              
+
               <div class="comment edy-site-blog-comment">
                 {{ comment.body_html }}  <b><span class="gray">{{ comment.created_at | format_date:"short" }}</span> <span class="blue">{{ comment.author }}</span></b> {% removebutton %}
-              </div>       
+              </div>
             {% endfor %}
-     
+
    </div>
-   
+
           <div class="comment-form">
      {% commentform %}
 {% unless comment.valid? %}<ul>
@@ -67,7 +67,7 @@
 </ul>{% endunless %}
        <div>
            <h1>{{"add_a_comment"|lc}}</h1>
-           
+
            <table>
              <tr>
                <td style="text-align: right;">{{ "name"|lc }}</td>
@@ -86,18 +86,18 @@
                <td><input type="submit" value="{{ "submit"|lc}}" class="submit" /></td>
              </tr>
            </table>
-               
+
        </div>
       {% endcommentform %}
    </div>
-   
+
    <div id="footer" class="clearfix">
      {% content name="footer" xpage="true" %}
    </div> <!-- //footer -->
     <div class="left" style="margin-top:10px;">{% include "Search" %}</div>
     <div class="right" style="font-size: 11px; margin-top:10px;" id="edicy">{% loginblock %}{{ "footer_login_link" | lc }}{% endloginblock %}</div>
     <div class="clearer"></div>
-    
+
   </div> <!-- //wrap -->
   {% include "JS" %}
 </body>
